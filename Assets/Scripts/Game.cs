@@ -175,10 +175,19 @@ public class Game : MonoBehaviour
         }
         else
         {
-            int score = AlphaBetaScore(0, 10, EFaction.AI);
-            //int score = MiniMax(false);
-            Debug.Log($"{bestGrid} : {score}");
-            Vector3 gridPosition = new Vector3(bestGrid.x * config.GridSize + bestGrid.x * config.GridGap, 0, bestGrid.y * config.GridSize + bestGrid.y * config.GridGap);
+            Grid grid;
+            // 先手时随机一个位置落子
+            if (remainGrids.Count == config.BoardSize.x * config.BoardSize.y)
+                grid = new Grid(random.Next(0, config.BoardSize.x), random.Next(0, config.BoardSize.x));
+            // 剪枝算法取最优位置落子
+            else
+            {
+                int score = AlphaBetaScore(0, 10, EFaction.AI);
+                //int score = MiniMax(false);
+                Debug.Log($"{bestGrid} : {score}");
+                grid = bestGrid;
+            }
+            Vector3 gridPosition = new Vector3(grid.x * config.GridSize + grid.x * config.GridGap, 0, grid.y * config.GridSize + grid.y * config.GridGap);
 
             if (PlaceChess(gridPosition, config.AI, EFaction.AI))
                 SwitchTurnOwner();

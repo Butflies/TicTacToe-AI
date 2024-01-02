@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{70F249A7-313A-030D-DEB6-E87695C1978E}</ProjectGuid>
+    <ProjectGuid>{47EE21F6-ABB1-BC49-4CE1-CE70EBA54717}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,13 +53,13 @@
     <UnityVersion>2020.3.26f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Game.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Board.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Config.cs" />
-    <Compile Include="Assets\Scripts\Chess.cs" />
+    <Compile Include="Assets\Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Chess.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
